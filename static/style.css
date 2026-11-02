@@ -1,0 +1,229 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101820;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #344452;
+}
+
+.navbar h2 {
+    color: #f4b942;
+    font-size: 23px;
+}
+
+.navbar span {
+    color: #aab5c0;
+    font-size: 14px;
+}
+
+/* Hero Section */
+
+.hero {
+    text-align: center;
+    padding: 65px 10px 35px;
+}
+
+.tagline {
+    color: #f4b942;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #f4b942;
+}
+
+.subtitle {
+    color: #aab5c0;
+    line-height: 1.7;
+}
+
+/* Upload Card */
+
+.card {
+    background: #1b2935;
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #344452;
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #aab5c0;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.upload-box {
+    border: 2px dashed #647586;
+    border-radius: 12px;
+    padding: 35px 15px;
+    margin-bottom: 22px;
+}
+
+.upload-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.upload-box h3 {
+    margin-bottom: 18px;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    background: #f4b942;
+    color: #101820;
+    border: none;
+    padding: 14px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e5a929;
+}
+
+/* Result */
+
+.result {
+    background: #263847;
+    border: 1px solid #f4b942;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 28px;
+}
+
+.result-label {
+    color: #f4b942;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.result h1 {
+    font-size: 30px;
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+.confidence {
+    color: #c6d0d9;
+}
+
+.confidence strong {
+    color: #f4b942;
+}
+
+/* Error */
+
+.error {
+    background: #462b2b;
+    color: #ff9999;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Players */
+
+.players {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.players h2 {
+    margin-bottom: 25px;
+}
+
+.player-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.player-list span {
+    background: #1b2935;
+    border: 1px solid #344452;
+    color: #dce3e9;
+    padding: 11px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #82909c;
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media(max-width: 600px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .navbar h2 {
+        font-size: 17px;
+    }
+
+    .navbar span {
+        font-size: 11px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}

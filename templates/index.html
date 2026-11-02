@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CricketVision AI | Cricketer Recognition</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+
+            <h2>🏏 CricketVision AI</h2>
+
+            <span>Deep Learning Project</span>
+
+        </nav>
+
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <p class="tagline">
+                POWERED BY CNN & DEEP LEARNING
+            </p>
+
+            <h1>
+                Indian Cricketer
+                <span>Recognition System</span>
+            </h1>
+
+            <p class="subtitle">
+                Upload an image and discover which Indian
+                cricketer is in the picture using our CNN model.
+            </p>
+
+        </section>
+
+
+        <!-- Upload Section -->
+        <div class="card">
+
+            <h2>Upload Cricketer Image</h2>
+
+            <p class="description">
+                Select an image in JPG, JPEG or PNG format.
+            </p>
+
+
+            <form method="POST"
+                  enctype="multipart/form-data">
+
+                <div class="upload-box">
+
+                    <div class="upload-icon">📸</div>
+
+                    <h3>Select Your Image</h3>
+
+                    <input type="file"
+                           name="image"
+                           accept=".jpg,.jpeg,.png"
+                           required>
+
+                </div>
+
+
+                <button type="submit">
+                    Identify Cricketer
+                </button>
+
+            </form>
+
+
+            <!-- Prediction Result -->
+            {% if prediction %}
+
+            <div class="result">
+
+                <p class="result-label">
+                    PREDICTION RESULT
+                </p>
+
+                <h1>{{ prediction }}</h1>
+
+                <p class="confidence">
+                    Confidence Score:
+                    <strong>{{ confidence }}%</strong>
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            <!-- Error Message -->
+            {% if error %}
+
+                <div class="error">
+                    {{ error }}
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- Supported Players -->
+        <section class="players">
+
+            <h2>Recognized Indian Cricketers</h2>
+
+            <div class="player-list">
+
+                <span>Hardik Pandya</span>
+                <span>Jasprit Bumrah</span>
+                <span>KL Rahul</span>
+                <span>Mohd Siraj</span>
+                <span>Ravindra Jadeja</span>
+                <span>Rishabh Pant</span>
+                <span>Rohit Sharma</span>
+                <span>Shubman Gill</span>
+                <span>Suryakumar Yadav</span>
+                <span>Venkatesh Iyer</span>
+                <span>Yuzvendra Chahal</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                CricketVision AI |
+                CNN Based Image Classification
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
